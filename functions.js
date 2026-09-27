@@ -39,6 +39,32 @@ function fibonacciSeries(limit) {
     }
 }
 
+function isPrime(number) {
+    const divisor = number - 1;
+    function prime(number, divsior) {
+        if (divsior == 1) return true;
+        if (number % divsior != 0) {
+            return (prime(number, divsior - 1));
+        }
+        return false;
+    }
+    return prime(number, divisor);
+}
+
+function findAllPrimes(limit) {
+    if (limit > 0) {
+        findAllPrimes(limit - 1);
+        if (isPrime(limit - 1)) console.log(limit - 1);
+    }
+}
+function firstPrimeAbove(number) {
+    if (isPrime(number + 1)) {
+        return number + 1;
+    }
+    return firstPrimeAbove(number + 1);
+
+}
+
 module.exports = {
     simpleInterest,
     compoundInterest,
@@ -47,4 +73,7 @@ module.exports = {
     factorial,
     nthFibonacciTerm,
     fibonacciSeries,
+    isPrime,
+    findAllPrimes,
+    firstPrimeAbove,
 };

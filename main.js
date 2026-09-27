@@ -1,17 +1,24 @@
 const sketch = require("./functions");
 
-console.log(`Simple interest : ${sketch.simpleInterest(1000, 5, 2)}`);
+console.log(`\nSimple interest : ${sketch.simpleInterest(1000, 5, 2)}`);
 
-console.log(`Compound interest : ${sketch.compoundInterest(1000, 10, 2)}`);
+console.log(`\nCompound interest : ${sketch.compoundInterest(1000, 10, 2)}`);
 
-console.log("Even numbers (upto 10):");
+console.log("\nEven numbers (upto 10):");
 sketch.evenNumbers(10);
 
-console.log(`Binary number of 10 : ${sketch.decToBinary(10)}`);
+console.log(`\nBinary number of 10 : ${sketch.decToBinary(10)}`);
 
-console.log(`Factorial of 5 : ${sketch.factorial(5)}`);
+console.log(`\nFactorial of 5 : ${sketch.factorial(5)}`);
 
-console.log(`6th Fibonacci Term : ${sketch.nthFibonacciTerm(6)}`);
+console.log(`\n6th Fibonacci Term : ${sketch.nthFibonacciTerm(6)}`);
 
-console.log("Fibonacci series (7):");
+console.log("\nFibonacci series (7):");
 sketch.fibonacciSeries(7);
+
+console.log(`\n5 is a prime number : ${sketch.isPrime(7)}`);
+
+console.log("\nPrime numbers (upto 10):");
+sketch.findAllPrimes(10);
+
+console.log(`\nFIrst prime number above 20 : ${sketch.firstPrimeAbove(20)}`);
