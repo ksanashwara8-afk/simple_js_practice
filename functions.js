@@ -7,11 +7,10 @@ function compoundInterest(amount, rate, time) {
 }
 
 function evenNumbers(limit) {
-    if (limit <= 0) {
-        return;
+    if (limit >= 0) {
+        evenNumbers(limit - 1);
+        if (limit % 2 === 0) console.log(limit);
     }
-    evenNumbers(limit - 1);
-    if (limit % 2 === 0) console.log(limit);
 }
 
 function decToBinary(decNumber) {
