@@ -3,7 +3,7 @@ function simpleInterest(amount, rate, time) {
 }
 
 function compoundInterest(amount, rate, time) {
-    return (amount * ((1 + rate / 100) ** time) - amount);
+    return amount * (1 + rate / 100) ** time - amount;
 }
 
 function evenNumbers(limit) {
@@ -17,7 +17,7 @@ function decToBinary(decNumber) {
     if (decNumber === 0) {
         return "";
     }
-    return (decToBinary(Math.floor(decNumber / 2)) + decNumber % 2);
+    return decToBinary(Math.floor(decNumber / 2)) + (decNumber % 2);
 }
 
 function factorial(number) {
@@ -28,8 +28,7 @@ function factorial(number) {
 function nthFibonacciTerm(n) {
     if (n === 0) return 0;
     if (n === 1) return 1;
-    return (nthFibonacciTerm(n - 1) + nthFibonacciTerm(n - 2));
-
+    return nthFibonacciTerm(n - 1) + nthFibonacciTerm(n - 2);
 }
 
 function fibonacciSeries(limit) {
@@ -44,7 +43,7 @@ function isPrime(number) {
     function prime(number, divsior) {
         if (divsior == 1) return true;
         if (number % divsior != 0) {
-            return (prime(number, divsior - 1));
+            return prime(number, divsior - 1);
         }
         return false;
     }
@@ -62,7 +61,11 @@ function firstPrimeAbove(number) {
         return number + 1;
     }
     return firstPrimeAbove(number + 1);
+}
 
+function hcf(n1, n2) {
+    if (n2 === 0) return n1;
+    return hcf(n2, n1 % n2);
 }
 
 module.exports = {
@@ -76,4 +79,5 @@ module.exports = {
     isPrime,
     findAllPrimes,
     firstPrimeAbove,
+    hcf,
 };

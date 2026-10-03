@@ -1,4 +1,4 @@
-const sketch = require("./functions");
+const sketch = require("./math_functions");
 
 console.log(`\nSimple interest : ${sketch.simpleInterest(1000, 5, 2)}`);
 
@@ -22,3 +22,5 @@ console.log("\nPrime numbers (upto 10):");
 sketch.findAllPrimes(10);
 
 console.log(`\nFIrst prime number above 20 : ${sketch.firstPrimeAbove(20)}`);
+
+console.log(`\nHCF of 12 & 18 : ${sketch.hcf(12, 18)}`);
